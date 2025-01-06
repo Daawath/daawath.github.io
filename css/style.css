@@ -152,7 +152,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/bg_photo.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -161,6 +161,7 @@
 .hero-header img {
     animation: imgRotate 50s linear infinite;
 }
+
 
 @keyframes imgRotate { 
     100% { 
@@ -476,4 +477,38 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+.video-thumbnail {
+    transition: transform 0.3s ease;
+    position: relative;
+    display: block;
+    margin: 0 auto; /* Center thumbnail */
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* Style for Play Icon */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.video-thumbnail:hover .play-icon {
+    opacity: 1;
+}
+
+/* Center video iframe */
+#videoContainer {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
